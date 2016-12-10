@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="libs/seedrandom.js"></script>
+	<script src="libs/jquery-3.1.1.min.js"></script>
+	<script src="libs/raphael.min.js"></script>
+	<script src="libs/pdf.worker.js"></script>
+	<script src="libs/pdf.js"></script>
+	<script src="schedulevis.js"></script>
+    <style>
+        .table-nonfluid {
+            width: auto !important;
+        }
+		.overlayed {
+			 position: absolute;
+			 top: 0;
+			 left: 1100px;
+		}
+
+		.overlay-container {
+			position: relative;
+		}
+    </style>
+</head>
+<body>
+	<div class="overlay-container">
+		<canvas class="overlayed" id="the-canvas">
+		</canvas>
+		<div id="area"></div>
+	</div>
+
+	<div align="center">
+
+	<p>
+		<form>Active resource: <select title="resource" name="res" id="resource-select"></select></form>
+	</p>
+
+	<p>
+		<form><button id="togglebtn">Toggle Table</button></form>
+	</p>
+
+		<div id="attrtable" class="container">
+			<table class="table table-striped table-nonfluid">
+				<tr><th>Attribute</th><th>Value</th></tr>
+				<tr><td>profit</td><td><div id="profit"></div></td></tr>
+				<tr><td>makespan</td><td><div id="makespan"></div></td></tr>
+				<tr><td>overtime costs</td><td><div id="costs"></div></td></tr>
+			</table>
+		</div>
+
+
+	</div>
+
+
+</body>
+</html>
